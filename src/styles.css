@@ -1,0 +1,54 @@
+body {
+  border: 3px solid grey;
+
+  margin: 0;
+  padding: 0;
+  font-family: "Zen Antique", serif;
+  font-size: 15px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.first {
+  border: 3px solid blue;
+  border-radius: 25px;
+}
+
+.col-8 {
+  border: 5px solid rgb(30, 214, 214);
+  border-radius: 25px;
+  margin-left: 50px;
+  padding: auto;
+  text-align: center;
+}
+
+.day {
+  font-size: 30px;
+}
+
+.temperature {
+  font-size: 80px;
+}
+
+.weather-degree {
+  font-size: 30px;
+}
+
+.weather {
+  text-align: left;
+}
+
+.humidity {
+  margin-left: 550px;
+}
+
+.wind {
+  margin-left: 550px;
+}
+
+.current-city {
+  font-size: 50px;
+}
