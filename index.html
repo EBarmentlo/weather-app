@@ -29,90 +29,70 @@
       <br>
       <form id="weather-search">
         <div class="row">
-          <div class="col-5">
+          <div class="col-9">
             <div class="mb-3">
-              <input type="City" class="form-control" id="search-text-input" value="Search for a city" />
-            </div>
-          
-          </div>
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary">Go</button>
+              <input type="City" class="form-control" id="search-text-input" placeholder="Search for a city" />
           </div>
         </div>
 
-        <div class="row">
-          
+        <div class="col-3">
+            <button type="submit" class="btn btn-primary w-100">Go</button>
+        </div>
+    </div>
 
-          <div class="col-8">
+    <div class="row">
+      <div class="col-8">
              <h2 id="current-city">City</h2>
              <span id="currentDay" class="day">day & date</span>
-             <div>
+      </div>
+        <div class="temperature-show">
               <br />
+              <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy"
+              class="float-left" id="icon">
+              <li id="description" class="description"></li>
               <br />
-              <span class= "temperature" id=temp> 15 </span>
+              <span class= "temperature" id=temp> 15  </span>
               <span class="weather-degree">
                <a href="#" id="celsius">ºC /
                </a>
                <a href="#" id="fahrenheit">ºF
                </a>
-              </div>
-              <div>
+        </div>
+        <div>
               </span>
-              <br />
-              <span class="weather" id="description">Weather and 🌧</span>  
               <br />
               <span class="humidity" >Humidity: <span id="humidity"></span>% </span>
               <br />
               <span class="wind">Wind: <span id="wind"></span>km/h</span>  </ul></span>
-            </div>
-          </div>
         </div>
+    </div>
         <br />
      
-
-           <div class="row">
-        <div class="col-2">
-          <div class="card" style="width: 18rem">
-            <div class="card-header">day x+1</div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">🌥</li>
-              <li class="list-group-item">Temp ℃ Precipitation %</li>
-            </ul>
-          </div>
+        <div class="container">
+  <div class="row">
+    <div class="col">
+      <ul class= "forcast-1">
+        <li> day </li>
+        <li> 🌥 </li>
+        <li> Temp ℃</li>
+      </ul></div>
+    <div class="col"><ul class= "forcast-2">
+        <li> day </li>
+        <li> 🌥 </li>
+        <li> Temp ℃</li>
+      </ul></div>
+    <div class="col"><ul class= "forcast-3">
+        <li> day </li>
+        <li> 🌥 </li>
+        <li> Temp ℃</li>
+      </ul></div>
+    <div class="col"><ul class= "forcast-4">
+        <li> day </li>
+        <li> 🌥 </li>
+        <li> Temp ℃</li>
+      </ul></div>
+  </div>
         </div>
-
-        <div class="col-2">
-          <div class="card" style="width: 18rem">
-            <div class="card-header">day x+2</div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">☁</li>
-              <li class="list-group-item">Temp ℃ Precipitation %</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-2">
-          <div class="card" style="width: 18rem">
-            <div class="card-header">day x+3</div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">⛅</li>
-              <li class="list-group-item">Temp ℃ Precipitation %</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-2">
-          <div class="card" style="width: 18rem">
-            <div class="card-header">day x+4</div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">☀</li>
-              <li class="list-group-item">Temp ℃ Precipitation %</li>
-            </ul>
-          </div>
-        </div>
-
-        
-      </div>
     </div>
     <br>
 <a href="https://github.com/EBarmentlo/weather-app" target="_blank">Open-source code</a> by Elisabeth Barmentlo
