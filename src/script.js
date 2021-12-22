@@ -45,7 +45,39 @@ function realTime() {
 
 realTime();
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+           <div class="col-2">
+           <div class = "weather-forecast-day">${day}</div>
+           <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="" width="40"/>
+           <br>
+           <div class="weather-forecast-temperature">
+           <span class="weather-forecast-temperature-max">18° |</span>
+           <span class="weather-forecast-temperature-min"> 12°</span>
+           </div>
+           </div>
+         `;
+  });
+
+  forecastHTML = forecastHTML + "</div>";
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //search engine
+
+function getForecast(coordinates) {
+  let apiKey = "42e65d2695e97c180fe2400ea84ef87f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}}&appid=${apiKey}&unit=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
@@ -66,6 +98,8 @@ function showTemperature(response) {
     );
 
   celsiusTempertature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
